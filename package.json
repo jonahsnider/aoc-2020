@@ -5,22 +5,27 @@
 		"url": "https://jonah.pw"
 	},
 	"ava": {
-		"extensions": [
-			"ts"
-		],
-		"files": [
-			"!tsc_output"
-		],
-		"require": [
-			"ts-node/register",
-			"source-map-support/register"
-		]
+		"typescript": {
+			"extensions": [
+				"ts"
+			],
+			"rewritePaths": {
+				"src/": "tsc_output/"
+			}
+		}
 	},
 	"bugs": {
-		"url": "https://github.com/pizzafox/typescript-starter/issues"
+		"url": "https://github.com/pizzafox/aoc-2020/issues"
+	},
+	"dependencies": {
+		"@pizzafox/benchmark": "^1.1.0",
+		"tslog": "^2.11.1"
 	},
 	"devDependencies": {
+		"@ava/typescript": "^1.1.1",
 		"@istanbuljs/nyc-config-typescript": "1.0.1",
+		"@tsconfig/node14": "^1.0.0",
+		"@types/node": "^14.14.9",
 		"ava": "3.13.0",
 		"eslint-plugin-prettier": "3.1.4",
 		"nyc": "15.1.0",
@@ -32,8 +37,8 @@
 		"xo": "0.35.0"
 	},
 	"license": "Apache-2.0",
-	"main": "./tsc_output/index.js",
-	"name": "typescript-starter",
+	"main": "./tsc_output/solve.js",
+	"name": "aoc-2020",
 	"nyc": {
 		"all": true,
 		"extends": "@istanbuljs/nyc-config-typescript",
@@ -48,13 +53,15 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/pizzafox/typescript-starter.git"
+		"url": "git+https://github.com/pizzafox/aoc-2020.git"
 	},
 	"scripts": {
+		"benchmark": "node tsc_output/benchmark.js",
 		"build": "tsc",
 		"lint": "xo",
-		"prebuild": "rm -rf tsc_output",
 		"pretest": "rm -rf coverage .nyc_output",
+		"solve": "node tsc_output/solve.js",
+		"start": "node .",
 		"style": "prettier --ignore-path .gitignore --check .",
 		"test": "nyc ava"
 	},

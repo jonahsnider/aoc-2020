@@ -1,16 +1,18 @@
-# [TypeScript](https://www.typescriptlang.org) Starter
+# Advent of Code 2020 Solutions
 
-[![Build Status](https://github.com/pizzafox/typescript-starter/workflows/CI/badge.svg)](https://github.com/pizzafox/typescript-starter/actions)
+[![Build Status](https://github.com/pizzafox/aoc-2020/workflows/CI/badge.svg)](https://github.com/pizzafox/aoc-2020/actions)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
-[![codecov](https://codecov.io/gh/pizzafox/typescript-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/pizzafox/typescript-starter)
+[![codecov](https://codecov.io/gh/pizzafox/aoc-2020/branch/master/graph/badge.svg)](https://codecov.io/gh/pizzafox/aoc-2020)
 
-My personal TypeScript starter template.
+My solutions for [Advent of Code](https://adventofcode.com/) 2020.
 
-## Prequisites
+## Running locally
 
-This project uses [Node.js](https://nodejs.org) 12 to run.
+### Prequisites
 
-This project uses [Yarn](https://yarnpkg.com) to install dependencies, although you can use another package manager like [npm](https://www.npmjs.com) or [pnpm](https://pnpm.js.org).
+This project uses [Node.js](https://nodejs.org) 15, or something similar, to run.
+
+[Yarn](https://yarnpkg.com) is used to install dependencies, although you can use another package manager like [npm](https://www.npmjs.com) or [pnpm](https://pnpm.js.org).
 
 ```sh
 yarn install
@@ -18,50 +20,52 @@ yarn install
 # or `pnpm install`
 ```
 
-## Building
+### Building
 
-Run the `build` script to compile the TypeScript into the `tsc_output` folder.
-This will compile the `src` and the `test` directory, so be careful not to upload the whole folder as a published package.
-
-## Style
-
-This project uses [Prettier](https://prettier.io) and [XO](https://github.com/xojs/xo).
-
-You can run Prettier in the project with this command:
+Run the `build` script to compile the TypeScript source and test files into the `tsc_output` folder.
 
 ```sh
-yarn run style
+yarn build
 ```
 
-You can run XO with this command:
+### Running every solution
+
+You can solve every solution after building with the `solve` script.
 
 ```sh
-yarn run lint
+yarn build
+yarn solve
 ```
 
-Note that XO will also error if you have TypeScript errors, not just if your formatting is incorrect.
+Input files are loaded in the `inputs` directory.
 
-## Linting
+### Benchmarking
 
-This project uses [XO](https://github.com/xojs/xo) (which uses [ESLint](https://eslint.org) and some plugins internally) to perform static analysis on the TypeScript.
-It reports things like unused variables or not following code conventions.
+Benchmarks can be run after building with the `benchmark` script.
 
 ```sh
-yarn run lint
+yarn build
+yarn benchmark
 ```
 
-Note that XO will also error if you have incorrect formatting, not just if your TypeScript code has errors.
+### Testing
 
-## Testing
-
-Unit tests are in the `test` folder.
-You can run the tests with the `test` script:
+Unit tests are stored alongside solutions as `index.test.ts`.
+You can run the tests with the `test` script after you build the project:
 
 ```sh
-yarn run test
+yarn build
+yarn test
 ```
 
-### Coverage
+Or for watch mode:
 
-This will generate a `coverage` folder which has a breakdown of coverage of the project.
-The CI will upload the coverage information to [CodeCov](https://codecov.io) which can be [viewed here](https://codecov.io/gh/pizzafox/typescript-starter).
+```sh
+yarn build --watch
+```
+
+and in another terminal:
+
+```sh
+yarn test --watch
+```
