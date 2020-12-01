@@ -1,7 +1,7 @@
 import {join} from 'path';
 import {linesSync} from './lib/fs.js';
 import {loggerScope} from './lib/logger.js';
-import * as solutions from './solutions/index.js';
+import * as solutions from './solutions';
 
 const logger = loggerScope('solver');
 
