@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"@pizzafox/benchmark": "1.1.0",
-		"tslog": "2.11.1"
+		"tslog": "2.12.0"
 	},
 	"devDependencies": {
 		"@ava/typescript": "1.1.1",
