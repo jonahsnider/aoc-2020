@@ -3,6 +3,8 @@ import {Lines} from '../../lib/fs';
 export default function day1part2(input: Lines) {
 	const numbers = input.map(string => Number(string));
 
+	numbers.sort((a, b) => a - b);
+
 	for (const i of numbers) {
 		for (const j of numbers) {
 			for (const k of numbers) {
