@@ -94,6 +94,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies with Yarn
         run: yarn install
+      - name: Compile TypeScript
+        run: yarn run build
       - name: Run tests
         run: yarn run test
       - name: Submit test coverage
