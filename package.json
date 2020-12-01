@@ -18,14 +18,14 @@
 		"url": "https://github.com/pizzafox/aoc-2020/issues"
 	},
 	"dependencies": {
-		"@pizzafox/benchmark": "^1.1.0",
-		"tslog": "^2.11.1"
+		"@pizzafox/benchmark": "1.1.0",
+		"tslog": "2.11.1"
 	},
 	"devDependencies": {
-		"@ava/typescript": "^1.1.1",
+		"@ava/typescript": "1.1.1",
 		"@istanbuljs/nyc-config-typescript": "1.0.1",
-		"@tsconfig/node14": "^1.0.0",
-		"@types/node": "^14.14.9",
+		"@tsconfig/node14": "1.0.0",
+		"@types/node": "14.14.9",
 		"ava": "3.13.0",
 		"eslint-plugin-prettier": "3.1.4",
 		"nyc": "15.1.0",
