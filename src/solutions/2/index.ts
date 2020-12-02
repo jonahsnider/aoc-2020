@@ -28,9 +28,7 @@ export default function day2(input: Lines): SolutionPair {
 		//#region Part 2
 		let occurrences = 0;
 
-		for (let i = 0; i < password.length; i++) {
-			const char = password[i];
-
+		for (const char of password) {
 			if (char === desiredChar) {
 				if (++occurrences > max) {
 					break;
