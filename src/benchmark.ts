@@ -21,6 +21,6 @@ for (const [title, day] of Object.entries(solutions)) {
 logger.info('benchmarks prepared');
 
 benchmark
-	.exec(1)
+	.exec(5)
 	.then(results => console.log(discordReporter(results)))
 	.catch(error => logger.error(error));
