@@ -2,7 +2,7 @@ import {SolutionPair} from '../../../types/aoc';
 import {Lines} from '../../lib/fs';
 
 export default function day1(input: Lines): SolutionPair {
-	const solutionPair: SolutionPair = [0, 0];
+	const solutionPair: SolutionPair = [-1, -1];
 
 	const numbers = input.map(string => Number(string));
 
@@ -13,7 +13,7 @@ export default function day1(input: Lines): SolutionPair {
 			if (a + b === 2020) {
 				solutionPair[0] = a * b;
 
-				if (solutionPair[1] !== 0) {
+				if (solutionPair[1] !== -1) {
 					return solutionPair;
 				}
 			}
@@ -22,7 +22,7 @@ export default function day1(input: Lines): SolutionPair {
 				if (a + b + c === 2020) {
 					solutionPair[1] = a * b * c;
 
-					if (solutionPair[0] !== 0) {
+					if (solutionPair[0] !== -1) {
 						return solutionPair;
 					}
 				}
