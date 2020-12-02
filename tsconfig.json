@@ -7,5 +7,5 @@
 	},
 	"exclude": ["node_modules", "nyc_output", "coverage"],
 	"extends": "@tsconfig/node14/tsconfig.json",
-	"include": ["src"]
+	"include": ["src", "types"]
 }

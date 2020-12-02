@@ -13,10 +13,9 @@ logger.info('benchmarking all solutions');
 for (const [title, day] of Object.entries(solutions)) {
 	const dayNumber = title.slice('day'.length);
 
-	const input = linesSync(join(__dirname, '..', 'inputs', `${dayNumber}.txt`));
+	const input = linesSync(join(__dirname, '..', '..', 'inputs', `${dayNumber}.txt`));
 
-	benchmark.add(`${title} part 1`, () => day.part1(input));
-	benchmark.add(`${title} part 2`, () => day.part2(input));
+	benchmark.add(title, () => day(input));
 }
 
 logger.info('benchmarks prepared');
