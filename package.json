@@ -10,7 +10,7 @@
 				"ts"
 			],
 			"rewritePaths": {
-				"src/": "tsc_output/"
+				"src/": "tsc_output/src/"
 			}
 		}
 	},
