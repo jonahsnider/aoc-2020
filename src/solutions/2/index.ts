@@ -25,7 +25,7 @@ export default function day2(input: Lines): SolutionPair {
 		const min = Number(minString);
 		const max = Number(maxString);
 
-		//#region Part 2
+		// #region Part 2
 		let occurrences = 0;
 
 		for (const char of password) {
@@ -35,17 +35,17 @@ export default function day2(input: Lines): SolutionPair {
 				}
 			}
 		}
-		//#endregion
+		// #endregion
 
 		if (min <= occurrences && occurrences <= max) {
 			valid[0]++;
 		}
 
-		//#region Part 2
+		// #region Part 2
 		if ((password[min - 1] === desiredChar) !== (password[max - 1] === desiredChar)) {
 			valid[1]++;
 		}
-		//#endregion
+		// #endregion
 	}
 
 	return valid;
