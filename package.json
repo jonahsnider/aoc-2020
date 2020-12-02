@@ -40,11 +40,6 @@
 	"main": "./tsc_output/solve.js",
 	"name": "aoc-2020",
 	"nyc": {
-		"all": true,
-		"extends": "@istanbuljs/nyc-config-typescript",
-		"include": [
-			"src/**/*.ts"
-		],
 		"reporter": [
 			"lcov",
 			"cobertura"
