@@ -21,9 +21,9 @@ export default function day2(input: Lines): SolutionPair {
 			throw new TypeError('Input string did not match expected format');
 		}
 
-		const {min: minStr, max: maxStr, char: desiredChar, password} = (matches.groups as unknown) as PasswordLineGroups;
-		const min = Number(minStr);
-		const max = Number(maxStr);
+		const {min: minString, max: maxString, char: desiredChar, password} = (matches.groups as unknown) as PasswordLineGroups;
+		const min = Number(minString);
+		const max = Number(maxString);
 
 		//#region Part 2
 		let occurrences = 0;
