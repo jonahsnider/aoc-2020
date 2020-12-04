@@ -28,7 +28,7 @@ namespace Passport {
 type BitField = number;
 
 const fieldBitfield: Record<Passport.Field, BitField> = {
-	[Passport.Field.BirthYear]: 1 << 0,
+	[Passport.Field.BirthYear]: Math.trunc(1),
 	[Passport.Field.IssueYear]: 1 << 1,
 	[Passport.Field.ExpirationYear]: 1 << 2,
 	[Passport.Field.Height]: 1 << 3,
