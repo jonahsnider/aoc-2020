@@ -28,7 +28,7 @@ export default function day3(rows: Lines): SolutionPair {
 		}
 	}
 
-	const slopes: [number, number][] = [
+	const slopes: Array<[number, number]> = [
 		[1, 1],
 		[3, 1],
 		[5, 1],
