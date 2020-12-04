@@ -20,7 +20,7 @@ export default function day3(rows: Lines): SolutionPair {
 		}
 
 		if (rows[y][x] === undefined) {
-			x = x % rows[y].length;
+			x %= rows[y].length;
 		}
 
 		if (rows[y][x] === Point.Tree) {
@@ -51,7 +51,7 @@ export default function day3(rows: Lines): SolutionPair {
 			}
 
 			if (rows[y][x] === undefined) {
-				x = x % rows[y].length;
+				x %= rows[y].length;
 			}
 
 			if (rows[y][x] === Point.Tree) {
