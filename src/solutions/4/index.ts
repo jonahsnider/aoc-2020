@@ -88,7 +88,7 @@ export default function day4(rows: Lines): SolutionPair {
 						if (value.length === 4) {
 							const birthYear = Number(value);
 
-							if (1920 <= birthYear && birthYear <= 2002) {
+							if (birthYear >= 1920 && birthYear <= 2002) {
 								break;
 							}
 						}
@@ -98,7 +98,7 @@ export default function day4(rows: Lines): SolutionPair {
 						if (value.length === 4) {
 							const issueYear = Number(value);
 
-							if (2010 <= issueYear && issueYear <= 2020) {
+							if (issueYear >= 2010 && issueYear <= 2020) {
 								break;
 							}
 						}
@@ -108,7 +108,7 @@ export default function day4(rows: Lines): SolutionPair {
 						if (value.length === 4) {
 							const expirationYear = Number(value);
 
-							if (2020 <= expirationYear && expirationYear <= 2030) {
+							if (expirationYear >= 2020 && expirationYear <= 2030) {
 								break;
 							}
 						}
@@ -116,7 +116,7 @@ export default function day4(rows: Lines): SolutionPair {
 						continue passportLoop;
 					case Passport.Field.Height:
 						const height = Number(value.slice(0, -2));
-						if ((value.endsWith('cm') && 150 <= height && height <= 193) || (59 <= height && height <= 76)) {
+						if ((value.endsWith('cm') && height >= 150 && height <= 193) || (height >= 59 && height <= 76)) {
 							break;
 						}
 
