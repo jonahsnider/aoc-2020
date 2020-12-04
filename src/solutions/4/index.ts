@@ -68,10 +68,10 @@ export default function day4(rows: Lines): SolutionPair {
 	passportLoop: for (const passportString of passportStrings) {
 		const fields: Map<Passport.Field, string> = new Map();
 		let presentFieldsBitfield: BitField = 0;
-		const segments = passportString.split(' ').map(segment => segment.split(':'));
+		const segments = passportString.split(' ');
 
 		for (const segment of segments) {
-			const [key, value] = segment;
+			const [key, value] = segment.split(':');
 
 			presentFieldsBitfield |= fieldBitfield[key as Passport.Field];
 
