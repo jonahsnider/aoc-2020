@@ -65,6 +65,7 @@ export default function day4(rows: Lines): SolutionPair {
 
 	const solution: SolutionPair = [0, 0];
 
+	/* eslint-disable no-labels */
 	passportLoop: for (const passportString of passportStrings) {
 		const fields: Map<Passport.Field, string> = new Map();
 		let presentFieldsBitfield: BitField = 0;
@@ -82,6 +83,7 @@ export default function day4(rows: Lines): SolutionPair {
 			solution[0]++;
 
 			for (const [field, value] of fields) {
+				// eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check, default-case
 				switch (field) {
 					case Passport.Field.BirthYear:
 						if (value.length === 4) {
@@ -114,9 +116,18 @@ export default function day4(rows: Lines): SolutionPair {
 
 						continue passportLoop;
 					case Passport.Field.Height:
-						const height = Number(value.slice(0, -2));
-						if ((value.endsWith('cm') && height >= 150 && height <= 193) || (height >= 59 && height <= 76)) {
-							break;
+						if (value.endsWith('cm')) {
+							const height = Number(value.slice(0, -2));
+
+							if (height >= 150 && height <= 193) {
+								break;
+							}
+						} else {
+							const height = Number(value.slice(0, -2));
+
+							if (height >= 59 && height <= 76) {
+								break;
+							}
 						}
 
 						continue passportLoop;
@@ -144,6 +155,7 @@ export default function day4(rows: Lines): SolutionPair {
 
 		solution[1]++;
 	}
+	/* eslint-enable no-labels */
 
 	return solution;
 }
