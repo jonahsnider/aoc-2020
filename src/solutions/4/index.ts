@@ -1,5 +1,4 @@
 import {SolutionPair} from '../../../types/aoc';
-import {Opaque} from 'type-fest';
 import {Lines} from '../../lib/fs';
 
 namespace Passport {
