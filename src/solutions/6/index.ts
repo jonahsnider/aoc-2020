@@ -24,7 +24,6 @@ function calculateIntersection<T>(a: Set<T>, b: Set<T>): Set<T> {
 }
 
 export default function day6(rows: Lines): SolutionPair {
-	console.log(rows);
 	// Default line splitter doesn't work great with this
 	const allAnswers = rows
 		.join('\n')
