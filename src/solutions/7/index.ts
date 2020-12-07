@@ -36,12 +36,11 @@ export default function day7(rules: Lines): SolutionPair {
 			let parentNode = graph.get(child.parent);
 
 			if (!parentNode) {
-				graph.set(child.parent, []);
-				parentNode = graph.get(child.parent);
+				const array: Bag[] = [];
 
-				if (!parentNode) {
-					throw new TypeError("Parent node wasn't present immediately after defining it");
-				}
+				parentNode = array;
+
+				graph.set(child.parent, array);
 			}
 
 			const {parent, ...rest} = child;
