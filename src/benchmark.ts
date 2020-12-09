@@ -1,8 +1,10 @@
 import {Benchmark, discordReporter} from '@pizzafox/benchmark';
 import {join} from 'path';
+import prettyMs from 'pretty-ms';
 import {linesSync} from './lib/fs.js';
 import {loggerScope} from './lib/logger.js';
 import * as solutions from './solutions';
+import {mean} from '@pizzafox/util';
 
 const benchmark = new Benchmark();
 
@@ -20,7 +22,18 @@ for (const [title, day] of Object.entries(solutions)) {
 
 logger.info('benchmarks prepared');
 
+const warmUp = 50;
+const trials = 500;
+
 benchmark
-	.exec(5)
-	.then(results => console.log(discordReporter(results)))
+	.exec(warmUp + trials)
+	.then(results => {
+		const times: Record<string, string> = {};
+
+		for (const [day, executionTimes] of results) {
+			times[day] = prettyMs(executionTimes.slice(warmUp).reduce(mean), {formatSubMilliseconds: true});
+		}
+
+		console.table(times);
+	})
 	.catch(error => logger.error(error));
