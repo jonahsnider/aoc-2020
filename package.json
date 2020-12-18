@@ -24,7 +24,7 @@
 	"devDependencies": {
 		"@ava/typescript": "1.1.1",
 		"@istanbuljs/nyc-config-typescript": "1.0.1",
-		"@pizzafox/util": "1.1.1",
+		"@pizzafox/util": "1.2.0",
 		"@tsconfig/node14": "1.0.0",
 		"@types/node": "14.14.14",
 		"ava": "3.14.0",
