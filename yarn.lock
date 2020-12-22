@@ -315,10 +315,10 @@
   resolved "https://registry.yarnpkg.com/@pizzafox/benchmark/-/benchmark-1.1.0.tgz#7bd9975facfd93cf12266514b1552d69af50d485"
   integrity sha512-3m2w/bVq0O8ioYfp0hkul8/eTbgxenOoxrjIgsSXo7ERFuQM7zCxQD3RrS51rLoDhM5Av5pZbHoZyE6TOEddqA==
 
-"@pizzafox/util@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@pizzafox/util/-/util-2.0.0.tgz#0e5622d33b18632e440d4ed0565fa3ca65f2bd95"
-  integrity sha512-ZvwljuFOziIne3iwGiD7lU6kPfYDwiYBttcXOu56MOJcqc0AcHKm+c3wiK/26j4m1wKpRqmelG0Z3BMG0s3o6Q==
+"@pizzafox/util@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@pizzafox/util/-/util-2.0.1.tgz#c7f2adc2765a92111c906f2cc7df671e9aa28790"
+  integrity sha512-UetDuKMZGdWaHXtgwJPiN7pqa/+/3Saui8xecYDsZIDkQZ6MT9PW1alOufOSiEsV3JTeA1L6DlmAb71IpY2omw==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
