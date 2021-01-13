@@ -18,7 +18,7 @@
 		"url": "https://github.com/pizzafox/aoc-2020/issues"
 	},
 	"dependencies": {
-		"@pizzafox/benchmark": "1.1.0",
+		"@pizzafox/benchmark": "2.0.0",
 		"tslog": "3.0.5"
 	},
 	"devDependencies": {
